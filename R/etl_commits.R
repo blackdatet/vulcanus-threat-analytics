@@ -8,7 +8,7 @@ transform_commits <- function(commits, repo_name) {
     transmute(
       repo = repo_name,
       author = commit.author.name,
-      date = as.POSIXct(commit.author.date),
+      date = as.POSIXct(commit.author.date, format = "%Y-%m-%dT%H:%M:%SZ", tz = "UTC"),
       message = commit.message,
       additions = NA_integer_,
       deletions = NA_integer_,

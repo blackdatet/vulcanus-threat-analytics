@@ -15,7 +15,7 @@ get_total_commits <- function(df) {
 # активность по часам
 get_activity_by_hour <- function(df) {
   df %>%
-    mutate(hour = format(date, "%H")) %>%
+    mutate(hour = as.integer(format(date, "%H"))) %>%
     group_by(hour) %>%
     summarise(commits = n())
 }
