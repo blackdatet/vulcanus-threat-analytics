@@ -1,3 +1,5 @@
+# Модуль получения данных из GitHub API
+# Автор: denrouz
 library(httr)
 library(jsonlite)
 
