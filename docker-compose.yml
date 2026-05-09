@@ -1,0 +1,13 @@
+# Docker Compose конфигурация проекта Vulcanus
+# Автор: blackdatet
+
+version: '3.8'
+
+services:
+  vulcanus-app:
+    build: .
+    container_name: vulcanus-shiny
+    ports:
+      - "3838:3838"
+    volumes:
+      - .:/app
