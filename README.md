@@ -28,3 +28,30 @@
 - GitHub API
 - Docker
 - testthat
+
+## Запуск проекта
+
+### Запуск Shiny-приложения локально
+
+```r
+shiny::runApp("app")
+```
+
+### Запуск через Docker
+
+```bash
+docker build -t vulcanus .
+docker run -p 3838:3838 vulcanus
+```
+
+### Запуск через Docker Compose
+
+```bash
+docker compose up --build
+```
+
+После запуска приложение будет доступно по адресу:
+
+```text
+http://localhost:3838
+```
