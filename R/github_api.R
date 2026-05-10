@@ -1,5 +1,9 @@
 # Модуль получения данных из GitHub API
 # Автор: denrouz
+
+# Модуль получения данных GitHub API
+# Возвращает информацию о коммитах репозитория
+
 library(httr)
 library(jsonlite)
 
