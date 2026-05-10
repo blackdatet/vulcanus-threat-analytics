@@ -6,7 +6,8 @@ source("../R/metrics.R")
 source("../R/anomaly_detection.R")
 source("../R/developer_profile.R")
 
-load("../data/example_commits.rda")
+example_commits <- readRDS("../data/example_commits.rds")
+example_commits$date <- as.POSIXct(example_commits$date, tz = "UTC")
 commits <- example_commits
 
 commits_per_author <- get_commits_per_author(commits)
